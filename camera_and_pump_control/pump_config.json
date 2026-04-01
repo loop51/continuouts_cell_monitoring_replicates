@@ -1,0 +1,31 @@
+{
+  "pressure": {
+    "min_pressure": -800,
+    "max_pressure": 1000,
+    "normal_max_pressure": 4,
+    "multiplying_factor": 5,
+    "divisor_factor": 2
+  },
+  "gamepad": {
+    "controller_index": 0,
+    "axis_mapping": {
+      "left_stick_vertical": 1,
+      "left_trigger": 4,
+      "right_trigger": 5
+    },
+    "button_mapping": {
+      "A": 0,
+      "Y": 3,
+      "LB": 4,
+      "RB": 5
+    }
+  },
+  "pump": {
+    "index": 0,
+    "simulation_mode": false
+  },
+  "display": {
+    "print_interval": 15,
+    "verbose": true
+  }
+}

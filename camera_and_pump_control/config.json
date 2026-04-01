@@ -1,0 +1,28 @@
+{
+  "roi": {
+    "x": 660,
+    "y": 0,
+    "width": 150,
+    "height": 1104,
+    "enabled": true
+  },
+
+  "camera": {
+    "width": 1608,
+    "height": 1104,
+    "fps": "max",
+    "index": 0
+  },
+
+  "recording": {
+    "codec": "mp4v",
+    "filename_prefix": "recording",
+	"cleanup_delay": 0.15
+  },
+  "display": {
+	"center_content": false,
+	"canvas_width": 1608,
+	"canvas_height": 1104,  
+	"background_color": [0, 0, 0]
+	}
+}

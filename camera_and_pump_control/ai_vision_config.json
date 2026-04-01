@@ -1,0 +1,166 @@
+{
+  "detection": {
+    "detection_interval": 0.1,
+    "dilate_kernel": 5,
+    "method": "contour",
+    "min_contour_area": 50,
+	"max_contour_area": 100000,
+	"aspect_ratio": 0.7,
+    "blur_kernel": 5,
+    "find_smallest_near_c_line": true,
+    "invert_threshold": true,
+	"threshold_value": 160,
+	"canny_low": 70,
+	"canny_high": 100,
+	"combination_mode": "weighted",
+	"combination_weights": {
+		"threshold_weight": 0.4,
+		"canny_weight": 0.6
+	}
+  },
+  "blob_detection": {
+    "min_threshold": 100,
+    "max_threshold": 255,
+    "threshold_step": 5,
+    "min_area": 15,
+    "max_area": 80,
+    "min_circularity": 0.8,
+    "min_convexity": 0.85,
+    "min_inertia_ratio": 0.7,
+    "filter_by_color": true,
+    "blob_color": 0
+  },
+  "horizontal_lines": {
+    "c_line_y": 588,
+    "gap_l": 100,
+    "show_lines": false,
+    "line_color": [255, 0, 0],
+    "c_line_color": [0, 0, 255],
+    "line_thickness": 1
+  },
+  "pump_control": {
+    "base_pressure": 0,
+    "max_pressure_change": 200,
+    "smoothing_factor": 0.3,
+    "deadband": 10,
+    "pressure_limits": [-10, 10]
+  },
+  "position_control": {
+    "enabled": false,
+    "control_gain": 0.5,
+    "target_zone_lines": 1,
+    "reverse_on_overshoot": true,
+    "velocity_control": true,
+    "target_velocity": 40.0,
+    "velocity_tolerance": 5.0,
+    "velocity_gain": 0.3
+  },
+  "area_mapping": {
+    "min_area": 20,
+    "max_area": 100,
+    "min_pressure": -100,
+    "max_pressure": 100
+  },
+  "size_detection": {
+    "max_width": 30,
+    "max_height": 30,
+    "prefer_near_c_line": true
+  },
+  "velocity_tracking": {
+    "enabled": false,
+    "min_line_crossings": 2,
+    "max_tracking_time": 2.0,
+    "position_tolerance": 30,
+    "velocity_smoothing": 0.7
+  },
+  "visualization": {
+    "show_detections": true,
+    "show_pressure_overlay": false,
+    "detection_color": [0, 255, 0],
+    "selected_object_color": [0, 255, 255],
+    "text_color": [255, 255, 255],
+    "verbose_mode": true
+  },
+  "logging": {
+    "verbose": false
+  },
+  "wall_detection": {
+	"use_hough_lines": true,
+	"hough_threshold": 50,
+	"min_line_length": 30,
+	"max_line_gap": 10,
+	"wall_mask_width": 15,
+	"use_orientation_filter": false,
+	"max_wall_alignment": 0.3
+  },
+  "morphology": {
+        "kernel_shape": "ellipse",
+        "kernel_size": 5,
+        "close_iterations": 5,
+        "open_iterations": 1
+    },
+	"vertical_lines": {
+        "show_lines": false,
+        "line1_x": 125,
+        "line2_x": 350,
+		"poly_width": 50,
+        "line_color": [
+            0,
+            255,
+            255
+        ],
+        "line_thickness": 2,
+        "count_between_lines": true
+    },
+	"taper_lines": {
+		"xtl": 75,
+		"xtr": -100,
+		"xbl": 75,
+		"xbr": -100
+	},
+	"video": {
+        "input_path": "video_log_20250828_122213.mp4",
+        "output_path": "detected_particles_output.mp4",
+        "save_output": true,
+        "display_live": true,
+        "show_debug_windows": true
+    },
+	"velocity_tracking": {
+		"enabled": true,
+		"tracker_type": "CSRT",  
+		"min_tracking_area": 25,
+		"max_tracking_distance": 100,
+		"velocity_smoothing": 0.7,
+		"min_line_crossings": 2,
+		"max_tracking_time": 3.0
+	},
+	"velocity_plotting": {
+		"enabled": false,
+		"window_size_seconds": 20.0,
+		"update_interval": 0.1,
+		"y_range": [-100, 100]
+	},
+	"tracking_config": {
+		"occlusion_zone_extent" : 25,
+		"tracked_object_tolerance": 250,
+		"proportional_kp" : 0.00045,
+		"proportional_kp_old" : 0.00045,
+		"integral_ki" : 0.000000,
+		"differential_kd" : 0.000000,
+		"acquiring_frames" : 5,
+		"matching_shape_constant" : 0.1,
+		"matching_area" : 0.3,
+		"search_range" : 350,
+		"history_size": 200,
+		"target_velocity": 70,
+		"kp_fwd": 0.00015,
+		"kp_rev": 0.00015,
+		"symmetrical": false,
+		"use_PID": false,
+		"lost_wait": 50,
+		"log_in_file": false,
+		"new_algorithm": false,
+		"top_limit": 5,
+		"bottom_limit": 5
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "network": {
+    "ip": "127.0.0.1",
+    "port": 12345,
+    "buffer_size": 1024,
+    "timeout": 1.0
+  },
+  "commands": {
+    "start_recording": "START_REC",
+    "stop_recording": "STOP_REC",
+    "status": "STATUS",
+    "ping": "PING"
+  },
+  "recording": {
+    "max_duration": 3600,
+    "default_duration": 60,
+    "auto_stop": true
+  },
+  "security": {
+    "validate_commands": true,
+    "allowed_ips": []
+  },
+  "logging": {
+    "verbose": true,
+    "log_commands": true
+  }
+}
